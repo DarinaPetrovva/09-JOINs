@@ -1,0 +1,8 @@
+   SELECT TOP (3)
+          e.EmployeeID,
+   	      e.FirstName
+     FROM Employees AS e
+ LEFt JOIN EmployeesProjects AS p
+       ON p.EmployeeID = e.EmployeeID 
+    WHERE p.ProjectID IS NULL
+ ORDER BY e.EmployeeID
